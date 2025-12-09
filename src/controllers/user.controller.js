@@ -25,7 +25,7 @@ exports.get = async (req, res) => {
 
 exports.check = async (req, res) => {
   try {
-    const list = users;
+    const list = users.filter((user) => user.status === 'available');
     return res.success({ users: list });
   } catch (error) {
     console.error('Error get user:', error);
