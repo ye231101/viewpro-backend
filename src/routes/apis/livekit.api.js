@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const controller = require('../../controllers/agora.controller');
+const controller = require('../../controllers/livekit.controller');
 
 router.get('/token', controller.token);
 

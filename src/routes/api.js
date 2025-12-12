@@ -3,7 +3,7 @@ const router = express.Router();
 
 const authRoutes = require('./apis/auth.api');
 const userRoutes = require('./apis/user.api');
-const agoraRoutes = require('./apis/agora.api');
+const livekitRoutes = require('./apis/livekit.api');
 
 // Health check endpoint
 router.get('/health', (req, res) => {
@@ -12,6 +12,6 @@ router.get('/health', (req, res) => {
 
 router.use('/auth', authRoutes);
 router.use('/user', userRoutes);
-router.use('/agora', agoraRoutes);
+router.use('/livekit', livekitRoutes);
 
 module.exports = router;
