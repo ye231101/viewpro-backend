@@ -1,5 +1,6 @@
 const { users } = require('../data/temp');
 const { generateToken } = require('../utils/jwt');
+const { getIO } = require('../utils/socket');
 
 exports.login = async (req, res) => {
   try {
@@ -30,6 +31,12 @@ exports.logout = async (req, res) => {
     // The user is already authenticated via middleware (req.user)
     // Just update their status
     req.user.status = 'unavailable';
+
+    const io = getIO();
+    io.emit('user:logout', {
+      username: req.user.username,
+    });
+
     return res.success({ message: 'Logged out successfully' });
   } catch (error) {
     console.error('Error logout:', error);

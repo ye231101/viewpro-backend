@@ -1,4 +1,5 @@
 const { users } = require('../data/temp');
+const { getIO } = require('../utils/socket');
 
 exports.list = async (req, res) => {
   try {
@@ -36,6 +37,12 @@ exports.check = async (req, res) => {
 exports.available = async (req, res) => {
   try {
     req.user.status = 'available';
+
+    const io = getIO();
+    io.emit('user:available', {
+      username: req.user.username,
+    });
+
     return res.success({ message: 'Set to available successfully' });
   } catch (error) {
     console.error('Error set to available:', error);
@@ -46,6 +53,12 @@ exports.available = async (req, res) => {
 exports.unavailable = async (req, res) => {
   try {
     req.user.status = 'unavailable';
+
+    const io = getIO();
+    io.emit('user:unavailable', {
+      username: req.user.username,
+    });
+
     return res.success({ message: 'Set to unavailable successfully' });
   } catch (error) {
     console.error('Error set to unavailable:', error);

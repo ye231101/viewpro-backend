@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const ResHelper = require('./utils/ResHelper');
+const { initIO } = require('./utils/socket');
 const { PORT } = require('./config');
 
 const app = express();
@@ -24,6 +25,8 @@ app.use((err, req, res, next) => {
 });
 
 const server = http.createServer(app);
+
+initIO(server);
 
 // Handle server startup errors
 server.on('error', (error) => {
