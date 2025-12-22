@@ -10,3 +10,5 @@ node_modules/
 .env.production.local
 
 ecosystem.config.js
+
+service-account.json

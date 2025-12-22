@@ -7,6 +7,7 @@
  * @property {string} email - Email address of the user
  * @property {string} avatar - Avatar image filename
  * @property {'available'|'unavailable'} status - Current availability status
+ * @property {string} fcmToken - FCM token
  */
 
 /** @type {User[]} */
@@ -19,6 +20,7 @@ export const users = [
     email: 'vneudoerffer@gmail.com',
     avatar: 'volkmar.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440001',
@@ -28,6 +30,7 @@ export const users = [
     email: 'john.smith@example.com',
     avatar: 'default.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440002',
@@ -37,6 +40,7 @@ export const users = [
     email: 'sarah.j@example.com',
     avatar: 'default.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440003',
@@ -46,6 +50,7 @@ export const users = [
     email: 'michael.b@example.com',
     avatar: 'default.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440004',
@@ -55,6 +60,7 @@ export const users = [
     email: 'emily.d@example.com',
     avatar: 'default.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440005',
@@ -64,6 +70,7 @@ export const users = [
     email: 'david.w@example.com',
     avatar: 'david.w.png',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440006',
@@ -73,6 +80,7 @@ export const users = [
     email: 'lisa.a@example.com',
     avatar: 'default.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440007',
@@ -82,6 +90,7 @@ export const users = [
     email: 'james.t@example.com',
     avatar: 'default.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440008',
@@ -91,6 +100,7 @@ export const users = [
     email: 'jennifer.m@example.com',
     avatar: 'default.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
   {
     id: '550e8400-e29b-41d4-a716-446655440009',
@@ -100,5 +110,6 @@ export const users = [
     email: 'robert.g@example.com',
     avatar: 'default.jpg',
     status: 'unavailable',
+    fcmToken: '',
   },
 ];
